@@ -1,0 +1,42 @@
+[01-Oct-2020 18:46:36 Asia/Dhaka] PHP Fatal error:  Call to a member function row() on a non-object in /home/nisaau5os/acc.nisaautos.com/application/views/login/login.php on line 2
+[01-Oct-2020 18:47:04 Asia/Dhaka] PHP Fatal error:  Call to a member function row() on a non-object in /home/nisaau5os/acc.nisaautos.com/application/views/login/login.php on line 2
+[01-Oct-2020 18:47:09 Asia/Dhaka] PHP Fatal error:  Call to a member function row() on a non-object in /home/nisaau5os/acc.nisaautos.com/application/views/login/login.php on line 2
+[05-Mar-2022 20:20:31 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:20:31 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:20:39 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:20:39 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:27:13 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:27:29 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:27:33 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:28:05 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:37:55 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:42:29 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:42:29 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:22 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:22 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:26 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:27 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:28 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:28 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:29 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:29 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:30 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:43:30 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[05-Mar-2022 20:45:11 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:07 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:07 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:18 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:18 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:31 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:32 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:33 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:33 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:35 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:35 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:36 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:36 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:38 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:23:38 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:30:03 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 11:42:01 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
+[06-Mar-2022 12:06:29 Asia/Dhaka] PHP Parse error:  syntax error, unexpected '?' in /home/nisaau5os/acc.nisaautos.com/application/controllers/Administrator/Assets.php on line 36
