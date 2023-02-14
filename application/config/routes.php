@@ -25,6 +25,18 @@ $route['updateBrand'] = 'Administrator/Page/Update_brand';
 $route['branddelete'] = 'Administrator/Page/branddelete';
 
 
+// Cash Transfer //
+$route['cash_transfer']          = 'Administrator/Transfer/cashTransfer';
+$route['add_cash_transfer']      = 'Administrator/Transfer/addCashTransfer';
+$route['update_cash_transfer']   = 'Administrator/Transfer/updateCashTransfer';
+$route['delete_cash_transfer']   = 'Administrator/Transfer/deleteCashTransfer';
+$route['get_cash_transfers']     = 'Administrator/Transfer/getCashTransfer'; 
+$route['get_cash_transfer_received'] = 'Administrator/Transfer/getCashTransferReceived';  
+$route['cash_transfer_record']     = 'Administrator/Transfer/cashTransferRecord';
+$route['cash_transfer_received'] = 'Administrator/Transfer/cashTransferReceived';
+$route['get_cash_receives']      = 'Administrator/Transfer/getCashReceives';
+
+
 
 // Expense Head=============
 $route['ExpenseHead'] 				= 'Administrator/BillController/Eindex';
@@ -403,7 +415,7 @@ $route['cashStatmentList'] = 'Administrator/Reports/cashStatmentList';
 $route['cashStatmentListPrint'] = 'Administrator/Reports/cashStatmentListPrint';
 $route['day_book'] = 'Administrator/Reports/dayBook';
 
-$route['BalanceSheet'] = 'Administrator/Reports/balanceSheet';
+$route['BalanceSheet'] = 'Administrator/Reports/BalanceSheet';
 $route['balance_sheet'] = 'Administrator/Reports/balance_sheet';
 $route['get_balance_sheet'] = 'Administrator/Reports/getBalanceSheet';
 $route['balanceSheetList'] = 'Administrator/Reports/balanceSheetList';
