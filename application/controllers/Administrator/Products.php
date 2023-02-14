@@ -1,4 +1,3 @@
-
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Products extends CI_Controller {
@@ -266,42 +265,53 @@ class Products extends CI_Controller {
                 u.Unit_Name,
                 (select ifnull(sum(pd.PurchaseDetails_TotalQuantity), 0) 
                         from tbl_purchasedetails pd 
+                        join tbl_purchasemaster pm on pm.PurchaseMaster_SlNo = pd.PurchaseMaster_IDNo
                         where pd.Product_IDNo = p.Product_SlNo
                         and pd.PurchaseDetails_branchID = '$branchId'
+                        " . (isset($data->date) && $data->date != null ? " and pm.PurchaseMaster_OrderDate <= '$data->date'" : "") . "
                         and pd.Status = 'a') as purchased_quantity,
                         
                 (select ifnull(sum(prd.PurchaseReturnDetails_ReturnQuantity), 0) 
                         from tbl_purchasereturndetails prd 
+                        join tbl_purchasereturn pr on pr.PurchaseReturn_SlNo = prd.PurchaseReturn_SlNo
                         where prd.PurchaseReturnDetailsProduct_SlNo = p.Product_SlNo
+                        " . (isset($data->date) && $data->date != null ? " and pr.PurchaseReturn_ReturnDate <= '$data->date'" : "") . "
                         and prd.PurchaseReturnDetails_brachid = '$branchId') as purchase_returned_quantity,
                         
                 (select ifnull(sum(sd.SaleDetails_TotalQuantity), 0) 
                         from tbl_saledetails sd
+                        join tbl_salesmaster sm on sm.SaleMaster_SlNo = sd.SaleMaster_IDNo
                         where sd.Product_IDNo = p.Product_SlNo
                         and sd.SaleDetails_BranchId  = '$branchId'
+                        " . (isset($data->date) && $data->date != null ? " and sm.SaleMaster_SaleDate <= '$data->date'" : "") . "
                         and sd.Status = 'a') as sold_quantity,
                         
                 (select ifnull(sum(srd.SaleReturnDetails_ReturnQuantity), 0)
                         from tbl_salereturndetails srd 
+                        join tbl_salereturn sr on sr.SaleReturn_SlNo = srd.SaleReturn_IdNo
                         where srd.SaleReturnDetailsProduct_SlNo = p.Product_SlNo
+                        " . (isset($data->date) && $data->date != null ? " and sr.SaleReturn_ReturnDate <= '$data->date'" : "") . "
                         and srd.SaleReturnDetails_brunchID = '$branchId') as sales_returned_quantity,
                         
                 (select ifnull(sum(dmd.DamageDetails_DamageQuantity), 0) 
                         from tbl_damagedetails dmd
                         join tbl_damage dm on dm.Damage_SlNo = dmd.Damage_SlNo
                         where dmd.Product_SlNo = p.Product_SlNo
+                        " . (isset($data->date) && $data->date != null ? " and dm.Damage_Date <= '$data->date'" : "") . "
                         and dm.Damage_brunchid = '$branchId') as damaged_quantity,
             
                 (select ifnull(sum(trd.quantity), 0)
                         from tbl_transferdetails trd
                         join tbl_transfermaster tm on tm.transfer_id = trd.transfer_id
                         where trd.product_id = p.Product_SlNo
+                        " . (isset($data->date) && $data->date != null ? " and tm.transfer_date <= '$data->date'" : "") . "
                         and tm.transfer_from = '$branchId') as transferred_from_quantity,
 
                 (select ifnull(sum(trd.quantity), 0)
                         from tbl_transferdetails trd
                         join tbl_transfermaster tm on tm.transfer_id = trd.transfer_id
                         where trd.product_id = p.Product_SlNo
+                        " . (isset($data->date) && $data->date != null ? " and tm.transfer_date <= '$data->date'" : "") . "
                         and tm.transfer_to = '$branchId') as transferred_to_quantity,
                         
                 (select (purchased_quantity + sales_returned_quantity + transferred_to_quantity) - (sold_quantity + purchase_returned_quantity + damaged_quantity + transferred_from_quantity)) as current_quantity,
@@ -570,79 +580,82 @@ class Products extends CI_Controller {
 		$data['allproduct'] =  $allproduct = $this->Billing_model->select_Product_without_limit();
 		
 		?>
-			<br/>
-        <div class="table-responsive">
-		<table id="dynamic-table" class="table table-striped table-bordered table-hover">
-			<thead>
-				<tr>
-					<th class="center">
-						<label class="pos-rel">
-							<input type="checkbox" class="ace" />
-							<span class="lbl"></span>
-						</label>
-					</th>
-					<th>Product ID</th>
-					<th>Categoty Name</th>
-					<th>Product Name</th>
-					<th class="hidden-480">Brand</th>
+<br />
+<div class="table-responsive">
+    <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="center">
+                    <label class="pos-rel">
+                        <input type="checkbox" class="ace" />
+                        <span class="lbl"></span>
+                    </label>
+                </th>
+                <th>Product ID</th>
+                <th>Categoty Name</th>
+                <th>Product Name</th>
+                <th class="hidden-480">Brand</th>
 
-					<th>Color</th>
-					<!--<th class="hidden-480">Purchase Rate</th>
+                <th>Color</th>
+                <!--<th class="hidden-480">Purchase Rate</th>
 					<th class="hidden-480">Sell Rate</th>--->
 
-					<th>Action</th>
-				</tr>
-			</thead>
+                <th>Action</th>
+            </tr>
+        </thead>
 
-			<tbody>
-                <?php 
+        <tbody>
+            <?php 
 				foreach($allproduct as $vallproduct)
 				{
 				?>
-                    <tr>
-								<td class="center">
-									<label class="pos-rel">
-										<input type="checkbox" class="ace" />
-										<span class="lbl"></span>
-									</label>
-								</td>
+            <tr>
+                <td class="center">
+                    <label class="pos-rel">
+                        <input type="checkbox" class="ace" />
+                        <span class="lbl"></span>
+                    </label>
+                </td>
 
-								<td>
-									<a href="#"><?php echo $vallproduct->Product_Code; ?></a>
-								</td>
-								<td><?php echo $vallproduct->ProductCategory_Name; ?></td>
-								<td class="hidden-480"><?php echo $vallproduct->Product_Name; ?></td>
-								<td><?php echo $vallproduct->brand_name; ?></td>
+                <td>
+                    <a href="#"><?php echo $vallproduct->Product_Code; ?></a>
+                </td>
+                <td><?php echo $vallproduct->ProductCategory_Name; ?></td>
+                <td class="hidden-480"><?php echo $vallproduct->Product_Name; ?></td>
+                <td><?php echo $vallproduct->brand_name; ?></td>
 
-								<td class="hidden-480">
-									<span class="label label-sm label-info arrowed arrowed-righ">
-									<?php echo $vallproduct->color_name; ?>
-									</span>
-								</td>
-								<!--<td class="hidden-480"><?php echo $vallproduct->Product_Purchase_Rate; ?></td>
+                <td class="hidden-480">
+                    <span class="label label-sm label-info arrowed arrowed-righ">
+                        <?php echo $vallproduct->color_name; ?>
+                    </span>
+                </td>
+                <!--<td class="hidden-480"><?php echo $vallproduct->Product_Purchase_Rate; ?></td>
 								<td class="hidden-480"><?php echo $vallproduct->Product_SellingPrice; ?></td>-->
 
-								<td>
-									<div class="hidden-sm hidden-xs action-buttons">
-										<span class="blue" onclick="Edit_product(<?php echo $vallproduct->Product_SlNo; ?>)" style="cursor:pointer;">
-											<i class="ace-icon fa fa-pencil bigger-130"></i>
-										</span>
+                <td>
+                    <div class="hidden-sm hidden-xs action-buttons">
+                        <span class="blue" onclick="Edit_product(<?php echo $vallproduct->Product_SlNo; ?>)"
+                            style="cursor:pointer;">
+                            <i class="ace-icon fa fa-pencil bigger-130"></i>
+                        </span>
 
-										<a class="green" href="" onclick="deleted(<?php echo $vallproduct->Product_SlNo; ?>)">
-											<i class="ace-icon fa fa-trash bigger-130 text-danger"></i>
-										</a>
+                        <a class="green" href="" onclick="deleted(<?php echo $vallproduct->Product_SlNo; ?>)">
+                            <i class="ace-icon fa fa-trash bigger-130 text-danger"></i>
+                        </a>
 
-										<a class="black" href="<?php echo base_url(); ?>Administrator/Products/barcodeGenerate/<?php echo $vallproduct->Product_SlNo; ?>" target="_blank">
-											<i class="ace-icon fa fa-barcode bigger-130"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-                <?php } ?> 
-                </tbody>    
-            </table> 
-			</div>
-		<?php
+                        <a class="black"
+                            href="<?php echo base_url(); ?>Administrator/Products/barcodeGenerate/<?php echo $vallproduct->Product_SlNo; ?>"
+                            target="_blank">
+                            <i class="ace-icon fa fa-barcode bigger-130"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>
+<?php
 		//echo "<pre>";print_r($data['allproduct']);exit;
 		//$this->load->view('Administrator/products/all_product', $data, TRUE);
         //$this->load->view('Administrator/index', $data);

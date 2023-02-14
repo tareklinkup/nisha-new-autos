@@ -1,48 +1,47 @@
 <style>
-    .balance-section{
-        width: 100%;
-        min-height: 150px;
-        background-color: #f0f1d3;
-        border: 1px solid #cfcfcf;
-        text-align: center;
-        padding: 25px 10px;
-        border-radius: 5px;
-    }
+.balance-section {
+    width: 100%;
+    min-height: 150px;
+    background-color: #f0f1d3;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+}
 
-    .balance-section h3{
-        margin: 0;
-        padding: 0;
-    }
+.balance-section h3 {
+    margin: 0;
+    padding: 0;
+}
 
-    .account-section{
-        display: flex;
-        border: 1px solid #cfcfcf;
-        border-radius: 5px;
-        overflow:hidden;
-        margin-bottom: 20px;
-    }
+.account-section {
+    display: flex;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
 
-    .account-section h3{
-        margin: 10px 0;
-        padding: 0;
-    }
+.account-section h3 {
+    margin: 10px 0;
+    padding: 0;
+}
 
-    .account-section .col1{
-        background-color: #247195;
-        color: white;
-        flex: 1;
-        display: flex;
-        align-items: center; 
-    }
-    .account-section .col2{
-        background-color: #def1f8;
-        flex: 2;
-        padding: 10px;
-        align-items: center; 
-        text-align:center;
-    }
+.account-section .col1 {
+    background-color: #247195;
+    color: white;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
 
-    
+.account-section .col2 {
+    background-color: #def1f8;
+    flex: 2;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
 </style>
 <div id="cashView">
     <div class="row">

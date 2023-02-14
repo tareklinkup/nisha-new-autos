@@ -8,8 +8,8 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	
-  	'username' => 'nisaau5os_admin1',
-  	'password' => 'du9cl?,4hL99',
+  	'username' => 'root',
+  	'password' => '',
   	'database' => 'nisaau5os_new',
 	
 	// 'username' => 'expressre2ailbd_admin11',

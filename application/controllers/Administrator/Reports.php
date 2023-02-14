@@ -632,34 +632,36 @@ class Reports extends CI_Controller {
 		{
 			$category = $this->Billing_model->select_category_by_branch($this->brunch);
 			?>
-			<select id="category"  data-placeholder="Choose a Category ....." class="chosen-select" style="width:200px">
-				<option value=""></option>		
-			<?php
+<select id="category" data-placeholder="Choose a Category ....." class="chosen-select" style="width:200px">
+    <option value=""></option>
+    <?php
 			foreach($category as $vcategory)
 			{
 			?>
-				<option value="<?php echo $vcategory->ProductCategory_SlNo; ?>"><?php echo $vcategory->ProductCategory_Name; ?></option>
-			<?php
+    <option value="<?php echo $vcategory->ProductCategory_SlNo; ?>"><?php echo $vcategory->ProductCategory_Name; ?>
+    </option>
+    <?php
 			}
 			?>
-			</select>
-			<?php
+</select>
+<?php
 		}else{
 			$products = $this->Product_model->products_by_brunch();
 			//echo "<pre>";print_r($product);exit;
 			?>
-			<select id="product"  data-placeholder="Choose a Product ....." class="chosen-select" style="width:200px">
-				<option value=""></option>		
-			<?php
+<select id="product" data-placeholder="Choose a Product ....." class="chosen-select" style="width:200px">
+    <option value=""></option>
+    <?php
 			foreach($products as $product)
 			{
 			?>
-				<option value="<?php echo $product->Product_SlNo; ?>"><?php echo $product->Product_Name; ?>-<?php echo $product->Product_Code; ?></option>
-			<?php
+    <option value="<?php echo $product->Product_SlNo; ?>">
+        <?php echo $product->Product_Name; ?>-<?php echo $product->Product_Code; ?></option>
+    <?php
 			}
 			?>
-			</select>
-			<?php
+</select>
+<?php
 		}
 	}
 	
